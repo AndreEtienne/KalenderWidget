@@ -1,0 +1,41 @@
+<div class="modal-kalender-tsgb"> 
+    <a id="modal-kalender" class="diyfeLinkAsButton">Der Kursplan in Gross</a>
+    <div class="kalender-tsgb">
+        <iframe src=
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vS9zW2Vk1gGn0XRpiHvFz9rhIrPdvZALni7zhIdLwS2oURH-26Nrans6t4dfV_rs2a2ID0wAKDWVb9C/pubhtml?gid=721739475&amp;single=true&amp;widget=true&amp;headers=false"
+        range="A1:S23" ></iframe>
+    </div>
+    <div id="kalender-tsgb" class="tsgb-modal-kalender">
+        <div class="tsgb-modal-content">
+            <span class="close">&times;</span>
+        <iframe src=
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vS9zW2Vk1gGn0XRpiHvFz9rhIrPdvZALni7zhIdLwS2oURH-26Nrans6t4dfV_rs2a2ID0wAKDWVb9C/pubhtml?gid=721739475&amp;single=true&amp;widget=true&amp;headers=false"
+        range="A1:S23"></iframe>
+        </div>
+    </div>
+
+    <script>
+    var element = document.createElement("link");
+    element.setAttribute("rel", "stylesheet");
+    element.setAttribute("type", "text/css");
+    element.setAttribute("href", "external.css");
+    document.getElementsByTagName("head")[0].appendChild(element);
+    var modal = document.getElementById("kalender-tsgb");
+    var btn = document.getElementById("modal-kalender");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+    </script>
+</div>
